@@ -1,0 +1,451 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+
+
+<!-- import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+
+// Import Font Awesome styles
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [scheduleData, setScheduleData] = useState([]);
+
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    subject: '',
+    frequency: '',
+    repeat: '',
+    time: ''
+  });
+
+  const formHandler = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Add the new schedule data to the scheduleData array
+    setScheduleData([...scheduleData, formData]);
+
+    console.log(scheduleData); // Log scheduleData to console
+
+    closeModal(); // Close the modal after submitting the form
+  };
+
+  const handleAddButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <>
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-auto col-sm-1' id='sideNav'></div>
+          <div className='col-auto col-sm-11' id='topNav'></div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-auto col' id='searchBar'>
+            <input type='search' placeholder='search' name='search' className='form-control' />
+          </div>
+          <div className='col-auto col-10 d-grid gap-2 d-md-flex justify-content-md-end' id='addButton'>
+            <button className='btn btn-primary me-md-0' type='button' onClick={handleAddButtonClick}>+ Add</button>
+          </div>
+        </div>
+        <div className='row' id='tableContent'>
+          <table className='table'>
+            <thead className='head'>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Subject</th>
+                <th>Schedule</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scheduleData.map((data, index) => (
+                <tr key={index}>
+                  <td>{data.title}</td>
+                  <td>{data.description}</td>
+                  <td>{data.subject}</td>
+                  <td>{data.frequency} at {data.time}</td>
+                  <td>
+                  <button className="btn btn-primary" >
+                      <i className="fas fa-edit"></i> 
+                    </button>
+                    <button className="btn btn-danger">
+                      <i className="fas fa-trash-alt"></i> 
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Modal for adding a new item */}
+      {showModal && (
+        <div className="modal fade show mt-5" style={{ display: 'block', marginLeft: '59%', width: '360px' }} tabIndex="-1" role="dialog">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <h6 style={{ marginLeft: '15px', marginTop: '15px' }}>Add Schedule</h6>
+              <div className="modal-body">
+                <form onSubmit={submitHandler}>
+                  <div>
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" name='title' id="title" onChange={formHandler} />
+                  </div>
+                  <div>
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <input type="text" name='description' onChange={formHandler} id="description" />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="form-label">Subject</label>
+                    <input type="text" name='subject' onChange={formHandler} id="subject" />
+                  </div>
+                  <div>
+                    <label htmlFor="frequency" className="form-label">Frequency</label>
+                    <input type="text" name='frequency' onChange={formHandler} id="frequency" />
+                  </div>
+                  <div>
+                    <label htmlFor="repeat" className="form-label">Repeat</label>
+                    <input type="text" name='repeat' onChange={formHandler} id="repeat" />
+                  </div>
+                  <div>
+                    <label htmlFor="time" className="form-label">Time</label>
+                    <input type="text" name='time' onChange={formHandler} id="time" />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" style={{ backgroundColor: "grey" }} onClick={closeModal}>Cancel</button>
+                <button type="submit" className="btn btn-primary" style={{ backgroundColor: "black" }} onClick={submitHandler}>Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default App; -->
+
+
+<!-- import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+
+// Import Font Awesome styles
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [scheduleData, setScheduleData] = useState([]);
+
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    subject: '',
+    frequency: '',
+    repeat: '',
+    time: ''
+  });
+
+  const formHandler = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Add the new schedule data to the scheduleData array
+    setScheduleData([...scheduleData, formData]);
+
+    console.log(scheduleData); // Log scheduleData to console
+
+    closeModal(); // Close the modal after submitting the form
+  };
+
+  const handleAddButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <>
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-auto col-sm-1' id='sideNav'></div>
+          <div className='col-auto col-sm-11' id='topNav'></div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-auto col' id='searchBar'>
+            <input type='search' placeholder='search' name='search' className='form-control' />
+          </div>
+          <div className='col-auto col-10 d-grid gap-2 d-md-flex justify-content-md-end' id='addButton'>
+            <button className='btn btn-primary me-md-0' type='button' onClick={handleAddButtonClick}>+ Add</button>
+          </div>
+        </div>
+        <div className='row' id='tableContent'>
+          <table className='table'>
+            <thead className='head'>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Subject</th>
+                <th>Schedule</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scheduleData.map((data, index) => (
+                <tr key={index}>
+                  <td>{data.title}</td>
+                  <td>{data.description}</td>
+                  <td>{data.subject}</td>
+                  <td>{data.frequency} at {data.time}</td>
+                  <td>
+                  <button className="btn btn-primary" style={{marginLeft:'5px'}}>
+                      <i className="fas fa-edit"></i> 
+                    </button>
+                    <button className="btn btn-danger">
+                      <i className="fas fa-trash-alt"></i> 
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Modal for adding a new item */}
+      {showModal && (
+        <div className="modal fade show mt-5" style={{ display: 'block', marginLeft: '59%', width: '360px' }} tabIndex="-1" role="dialog">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <h6 style={{ marginLeft: '15px', marginTop: '15px' }}>Add Schedule</h6>
+              <div className="modal-body">
+                <form onSubmit={submitHandler}>
+                  <div>
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" name='title' id="title" onChange={formHandler} />
+                  </div>
+                  <div>
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <input type="text" name='description' onChange={formHandler} id="description" />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="form-label">Subject</label>
+                    <input type="text" name='subject' onChange={formHandler} id="subject" />
+                  </div>
+                  <div>
+                    <label htmlFor="frequency" className="form-label">Frequency</label>
+                    <input type="text" name='frequency' onChange={formHandler} id="frequency" />
+                  </div>
+                  <div>
+                    <label htmlFor="repeat" className="form-label">Repeat</label>
+                    <input type="text" name='repeat' onChange={formHandler} id="repeat" />
+                  </div>
+                  <div>
+                    <label htmlFor="time" className="form-label">Time</label>
+                    <input type="text" name='time' onChange={formHandler} id="time" />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" style={{ backgroundColor: "grey" }} onClick={closeModal}>Cancel</button>
+                <button type="submit" className="btn btn-primary" style={{ backgroundColor: "black" }} onClick={submitHandler}>Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default App; -->
+
+
+<!-- import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+// Import Font Awesome styles
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [scheduleData, setScheduleData] = useState([]);
+
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    subject: '',
+    frequency: '',
+    repeat: '',
+    time: ''
+  });
+
+  useEffect(() => {
+    // Retrieve stored schedule data from local storage when component mounts
+    const storedData = JSON.parse(localStorage.getItem('scheduleData'));
+    if (storedData && Array.isArray(storedData)) {
+      setScheduleData(storedData);
+    }
+  }, []);
+
+  const formHandler = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Add the new form data to the scheduleData array
+    const updatedScheduleData = [...scheduleData, formData];
+    setScheduleData(updatedScheduleData);
+
+    // Store the updated scheduleData in local storage
+    localStorage.setItem('scheduleData', JSON.stringify(updatedScheduleData));
+
+    console.log(updatedScheduleData); // Log updated scheduleData to console
+
+    closeModal(); // Close the modal after submitting the form
+  };
+
+  const handleAddButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <>
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-auto col-sm-1' id='sideNav'></div>
+          <div className='col-auto col-sm-11' id='topNav'></div>
+        </div>
+      </div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-auto col' id='searchBar'>
+            <input type='search' placeholder='search' name='search' className='form-control ' />
+            {/* <i className='fas fa-search'></i> */}
+          </div>
+          <div className='col-auto col-10 d-grid gap-2 d-md-flex justify-content-md-end' id='addButton'>
+            <button className='btn btn-primary me-md-0' type='button' onClick={handleAddButtonClick}>+ Add</button>
+          </div>
+        </div>
+        <div className='row' id='tableContent'>
+          <table className='table'>
+            <thead className='head'>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Subject</th>
+                <th>Schedule</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scheduleData.map((data, index) => (
+                <tr key={index}>
+                  <td>{data.title}</td>
+                  <td>{data.description}</td>
+                  <td>{data.subject}</td>
+                  <td>{data.frequency} at {data.time}</td>
+                  <td>
+                    <button className="btn btn-primary" style={{ marginLeft: '5px' }}>
+                      <i className="fas fa-edit"></i>
+                    </button>
+                    <button className="btn btn-danger">
+                      <i className="fas fa-trash-alt"></i>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Modal for adding a new item */}
+      {showModal && (
+        <div className="modal fade show mt-5" style={{ display: 'block', marginLeft: '59%', width: '360px' }} tabIndex="-1" role="dialog">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <h6 style={{ marginLeft: '15px', marginTop: '15px' }}>Add Schedule</h6>
+              <div className="modal-body">
+                <form onSubmit={submitHandler}>
+                  <div>
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" name='title' id="title" onChange={formHandler} />
+                  </div>
+                  <div>
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <input type="text" name='description' onChange={formHandler} id="description" />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="form-label">Subject</label>
+                    <input type="text" name='subject' onChange={formHandler} id="subject" />
+                  </div>
+                  <div>
+                    <label htmlFor="frequency" className="form-label">Frequency</label>
+                    <input type="text" name='frequency' onChange={formHandler} id="frequency" />
+                  </div>
+                  <div>
+                    <label htmlFor="repeat" className="form-label">Repeat</label>
+                    <input type="text" name='repeat' onChange={formHandler} id="repeat" />
+                  </div>
+                  <div>
+                    <label htmlFor="time" className="form-label">Time</label>
+                    <input type="text" name='time' onChange={formHandler} id="time" />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" style={{ backgroundColor: "grey" }} onClick={closeModal}>Cancel</button>
+                <button type="submit" className="btn btn-primary" style={{ backgroundColor: "black" }} onClick={submitHandler}>Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default App; -->
