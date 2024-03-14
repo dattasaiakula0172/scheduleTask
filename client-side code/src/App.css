@@ -1,0 +1,49 @@
+body{
+  background-color: rgb(243,243,249);
+}
+
+#sideNav {
+  position: fixed;
+  background-color: rgb(57,30,90);
+  height: 100%;
+  width: 9%;
+}
+
+#topNav {
+  position: static;
+  background-color: rgb(227, 224, 233);
+  width: 100%;
+  height: 50px;
+}
+
+/* #searchBar{
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+#addButton{
+  position: absolute;
+  margin-top: 2%;
+ 
+  float: right;
+} */
+
+#tableContent{
+  position: relative;
+  margin-top: 4%;
+  margin-left: 3%;
+}
+
+.table{
+  border: 1px  rgb(235, 232, 239);
+}
+
+.table th{
+  background-color: rgb(225,222,234);
+    color: rgb(51,51,51);
+    overflow: hidden;
+}
+
+
+
