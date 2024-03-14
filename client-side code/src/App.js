@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import axios from 'axios';
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 // Import Font Awesome styles
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -187,7 +188,9 @@ function App() {
 
           </div>
           <div className="col-md-6" >
-            <button style={{ marginLeft: "80%", backgroundColor: "rgb(57,30,90)", color: "white" }} className='btn float-end me-md-0' type='button' onClick={handleAddButtonClick}>+ Add</button>
+            <button style={{ marginLeft: "80%", backgroundColor: "rgb(57,30,90)", color: "white" }} className='btn float-end me-md-0' type='button'
+             onClick={handleAddButtonClick}><IoIosAddCircleOutline style={{marginRight:"10px",color:"white",backgroundColor: "rgb(57,30,90)"}} />
+  Add </button>
           </div>
         </div>
         <div className='row' id='tableContent'>
@@ -247,7 +250,7 @@ function App() {
                   <div className="form-group row" style={{ marginBottom: '2%' }} >
                     <label htmlFor="title" className="col-sm-3 col-form-label">Title</label>
                     <div className="col-sm-9">
-                      <input type="text" name='title' id="title" className="form-control" onChange={formHandler} value={formData.title} />
+                      <input type="text" required name='title' id="title" className="form-control" onChange={formHandler} value={formData.title} />
                     </div>
                   </div>
                   <div className="form-group row" style={{ marginBottom: '2%' }}>
